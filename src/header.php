@@ -6,7 +6,7 @@ if(isset($_SESSION['user']))
 
   <div class="header-bottom-agileits" >
   <div class="w3-logo">
-      <h1><a href="home.php">&nbsp;<i class="fa fa-cubes" aria-hidden="true"></i>VerData</a></h1>
+      <h1>&nbsp;&nbsp;<a href="home.php"><i class="fa fa-cubes" aria-hidden="true"></i>VerData</a></h1>
     </div>
   <!-- navigation -->
   <nav class="navbar navbar-default shift" style="background-color: black; ">
@@ -24,7 +24,8 @@ if(isset($_SESSION['user']))
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float: right;">
       <ul class="nav navbar-nav">
-      <li><a href="history.php">HI <?php echo $name ?></a></li>
+      <li><a href="#">HI <?php echo $name ?></a></li>
+          <li><a href="history.php">History</a></li>
       <li><a href="src/logout_exec.php">Logout</a></li>
       </ul>
 

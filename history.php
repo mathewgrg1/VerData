@@ -38,9 +38,10 @@ $query=mysql_query("select * from hashvalues where userID=".$_SESSION['userID'])
           <tr>  
             <th>Sl. No.</th>  
             <th>File Name</th>  
-            <th>File Size<br>(in KB)</th>  
+            <th>File Size</th>  
             <th>Hash String</th>
-            <th>Timestamp</th>  
+            <th>Timestamp</th>
+            <th>Action</th>
           </tr>  
         </thead>  
         <tbody>  
@@ -51,9 +52,10 @@ $query=mysql_query("select * from hashvalues where userID=".$_SESSION['userID'])
                     echo "<tr>
                     <td>".++$i."</td>
                     <td>".$fetch['fileName']."</td>
-                    <td>".$fetch['fileSize']."</td>
+                    <td>".$fetch['fileSize']." KB</td>
                     <td>".$fetch['hashString']."</td>
                     <td>".$fetch['timestamp']."</td>
+                    <td><a href=\"src/removeEntry.php?id=".$fetch['hashID']."\">Remove</a></td>
                     </tr>";
             }
             ?>
